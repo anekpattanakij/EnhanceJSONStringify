@@ -1,0 +1,25 @@
+{
+  "name": "enhance-json-stringify",
+  "version": "1.0.0",
+  "description": "Enhance JSON Stringify function to be able to print cyclic dependency object",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "chai": "^4.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anekpattanakij/EnhanceJSONStringify.git"
+  },
+  "author": "Anupol Anekpattanakij",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anekpattanakij/EnhanceJSONStringify/issues"
+  },
+  "homepage": "https://github.com/anekpattanakij/EnhanceJSONStringify#readme"
+}
