@@ -1,11 +1,16 @@
-module.exports = function enhanceStringify(stringObject, formatOption = '\t') {
+const CIRCULAR_REFERENCE_REPLACEMENT = 'CIRCULAR_DEPENDECY_OBJECT';
+
+module.exports = function enhanceStringify(stringObject, formatOption = '\t', replaceString = CIRCULAR_REFERENCE_REPLACEMENT) {
     let cache = [];
     const returnStringObject = JSON.stringify(stringObject, (key, value) => {
         if (typeof value === 'object' && value !== null) {
-            if (cache.indexOf(value) !== -1) { // If found circular reference, discard key
-                return;
+            if (cache.indexOf(value) !== -1) { // If found circular reference
+                // cache.push(CIRCULAR_REFERENCE_REPLACEMENT);// Replace circular reference with string
+                return replaceString;
+            } else
+            {
+                cache.push(value);// Store value for check circular
             }
-            cache.push(value);// Store value in collection
         }
         return value;
     }, formatOption);
