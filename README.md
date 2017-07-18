@@ -13,4 +13,4 @@ enhanceStringify(ObjectToStringify[, formatOption [, replaceString ]])
 
 ```
 
-Default format message is '\t' and replace circular dependency object is 'CIRCULAR_DEPENDECY_OBJECT' string, but you can customize by yourself.
+Default format message is '\t' and replace circular dependency object with 'CIRCULAR_DEPENDECY_OBJECT' string, but you can customize by yourself.
